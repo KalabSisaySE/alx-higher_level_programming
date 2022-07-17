@@ -6,6 +6,5 @@ if number < 0:
 elif number == 0:
     type = "zero"
 else:
-    type = "positive"
-    
+    type = "positive"    
 print(f"{number} is {type}")
