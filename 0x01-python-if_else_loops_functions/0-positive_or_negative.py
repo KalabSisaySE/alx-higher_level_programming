@@ -5,7 +5,7 @@ if number < 0:
     type = "negative"
 elif number == 0:
     type = "zero"
-else :
+else:
     type = "positive"
     
 print(f"{number} is {type}")
