@@ -5,7 +5,8 @@ if len(argv) == 2:
     sign = ":"
     word = "argument"
 else:
-    sign = ":"
+    if len(argv) != 1:
+        sign = ":"
     word = "arguments"
 if __name__ == "__main__":
     print("{} {}{}".format(len(argv) - 1, word, sign))
