@@ -6,10 +6,10 @@ class Square:
     """sets the size of the square."""
     def __init__(self, size=0):
         """checks for type and value before setting the `size`.
-        
+
         Args:
             size(int, optional): size of the square.
-        
+
         Raises:
             TypeError: if `size` is not an integer.
             ValueError: if `size` is lessthan zero.
