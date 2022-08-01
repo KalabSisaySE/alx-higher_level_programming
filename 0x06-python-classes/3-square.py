@@ -4,6 +4,7 @@
 
 class Square:
     """sets the size of the square and calculates area."""
+
     def __init__(self, size=0):
         """checks for type and value before setting the `size`
 
@@ -20,6 +21,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+            
     def area(self):
         """calculates the area of the square.
         Returns:
