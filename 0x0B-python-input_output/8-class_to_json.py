@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """defines a function."""
-import json
 
 
 def class_to_json(obj):
@@ -12,4 +11,4 @@ def class_to_json(obj):
     Return
         dict: dictionary decription.
     """
-    return json.loads(json.dumps(obj.__dict__))
+    return obj.__dict__
