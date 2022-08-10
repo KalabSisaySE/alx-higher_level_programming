@@ -15,7 +15,8 @@ if __name__ == "__main__":
 
     for i in range(len(argv)):
         arg_list.append(argv[i])
-    arg_list.remove('7-add_item.py')
+    if len(arg_list) > 0:
+        arg_list.remove("./7-add_item.py")
 
     if type(load_from_json_file(filename)) == list:
         file_list = load_from_json_file(filename)
