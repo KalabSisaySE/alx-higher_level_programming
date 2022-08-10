@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """9-student Module."""
-import json
 
 
 class Student:
@@ -15,4 +14,4 @@ class Student:
         Returns:
             dict: representation of the instance.
         """
-        return json.loads(json.dumps(self.__dict__))
+        return self.__dict__
