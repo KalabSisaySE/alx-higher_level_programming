@@ -85,3 +85,10 @@ float overflow:
     Traceback (most recent call last):
         ...
     OverflowError: cannot convert float infinity to integer
+
+string number:
+
+    >>> add_integer(23, '2') 
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
