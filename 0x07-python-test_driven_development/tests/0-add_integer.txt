@@ -1,0 +1,61 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+This is an example text file in reStructured format.  First import
+``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+two positive integers:
+
+    >>> add_integer(2, 3) 
+    5
+
+one positive and one negative integers:
+
+    >>> add_integer(2, -7) 
+    -5
+
+two negative integers:
+
+    >>> add_integer(-3, -7) 
+    -10
+
+addition with 0:
+
+    >>> add_integer(2, 0)   
+    2
+
+adding 0 with 0:
+
+    >>> add_integer(0, 0) 
+    0
+
+adding positive float numbers:
+
+    >>> add_integer(4.5, 2.3) 
+    6
+
+adding positive and negative float numbers:
+
+    >>> add_integer(4.5, -2.3) 
+    2
+
+adding a number to a string first argument:
+
+    >>> add_integer(4.5, 'string') 
+    Traceback (most recent call last):
+      ...
+    TypeError: b must be an integer
+
+adding a number to a string second argument:
+
+    >>> add_integer('string', 5)    
+    Traceback (most recent call last):
+      ...
+    TypeError: a must be an integer
