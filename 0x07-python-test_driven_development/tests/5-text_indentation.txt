@@ -28,3 +28,10 @@ integer argument:
     Traceback (most recent call last):
         ...
     TypeError: text must be a string
+
+missing argument:
+
+    >>> print_square()
+    Traceback (most recent call last):
+    File "
+    TypeError: print_square() missing 1 required positional argument: 'size'
