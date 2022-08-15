@@ -54,3 +54,9 @@ square with a string size:
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
+
+missing argument;
+
+    Traceback (most recent call last):
+    File "
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
