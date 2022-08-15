@@ -1,0 +1,43 @@
+The ``3-say_my_name`` module
+============================
+
+Using ``say_my_name``
+---------------------
+
+This is an example text file in reStructuredText format.  First import
+``say_my_name`` from ``3-say_my_name`` module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+
+only first argument:
+
+    >>> say_my_name("Kalab")          
+    My name is Kalab 
+
+first and second argument:
+
+    >>> say_my_name("Kalab", "Sisay") 
+    My name is Kalab Sisay
+
+first argument number:
+
+    >>> say_my_name(4)                
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+first argument string and second argument number:
+
+    >>> say_my_name("Kalab", 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+first and second argument number:
+
+    >>> say_my_name(4, 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
