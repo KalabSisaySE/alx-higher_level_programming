@@ -7,7 +7,7 @@ defines a function `add_attribute`.
 
 def add_attribute(obj, name, value):
     """adds attribute to `cls`.
-    
+
     Args:
         obj (obj): the object to add the attribute to.
         name (str): name of the attribute.
