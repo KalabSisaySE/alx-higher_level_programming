@@ -19,6 +19,11 @@ class TestMaxInteger(unittest.TestCase):
         """tests the function max_integer with empty list."""
         self.assertEqual(max_integer([]), None)
     
+    def test_list_of_one_element(self):
+        """tests the function max_integer with one element list."""
+        self.assertEqual(max_integer([7]), None)
+
+    
     def test_strings(self):
         """tests the function max_integer with strings."""
         strings = ["youtube", "podcast", "vlog"]
