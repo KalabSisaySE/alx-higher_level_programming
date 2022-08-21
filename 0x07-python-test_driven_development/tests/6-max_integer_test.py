@@ -21,7 +21,7 @@ class TestMaxInteger(unittest.TestCase):
     
     def test_list_of_one_element(self):
         """tests the function max_integer with one element list."""
-        self.assertEqual(max_integer([7]), None)
+        self.assertEqual(max_integer([7]), 7)
 
     
     def test_strings(self):
