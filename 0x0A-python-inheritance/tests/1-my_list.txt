@@ -1,0 +1,56 @@
+the ``1-my_list`` module
+========================
+
+Using ``MyList``
+----------------
+
+This is an example text file in reStructuredText format.  First import
+``MyList`` from ``1-my_list`` module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+
+ordered entry:
+
+    >>> my_list = MyList()
+    >>> my_list.append(1) 
+    >>> my_list.append(6) 
+    >>> my_list.append(9) 
+    >>> print(my_list) 
+    [1, 6, 9]
+    >>> my_list.print_sorted()
+    [1, 6, 9]
+
+unordered entry:
+
+    >>> new_list = MyList()
+    >>> new_list.append(89) 
+    >>> new_list.append(45) 
+    >>> new_list.append(36) 
+    >>> new_list.append(13) 
+    >>> new_list.append(9)  
+    >>> new_list.append(-9) 
+    >>> print(new_list)    
+    [89, 45, 36, 13, 9, -9]
+    >>> new_list.print_sorted()
+    [-9, 9, 13, 36, 45, 89]
+    >>> print(new_list)
+    [89, 45, 36, 13, 9, -9]
+
+empty object:
+
+    >>> my_list2 = MyList()
+    >>> print(my_list2) 
+    []
+    >>> my_list2.print_sorted()
+    []
+
+passing a list:
+
+    >>> li = [3, 45, 6, 7, 9] 
+    >>> my_list = MyList(li) 
+    >>> my_list.print_sorted()
+    [3, 6, 7, 9, 45]
+    >>> print(my_list)        
+    [3, 45, 6, 7, 9]
