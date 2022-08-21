@@ -52,13 +52,19 @@ testing integer_validator method with one argument:
 
     >>> my_base_geometery.integer_validator("value")     
     Traceback (most recent call last):
-    ...
-    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 7-base_geometry.txt[8]>", line 1, in <module>
+        my_base_geometery.integer_validator("value")
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 testing integer_validator method with no argument:
 
     >>> my_base_geometery.integer_validator()        
     Traceback (most recent call last):
-    ...
-    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 7-base_geometry.txt[9]>", line 1, in <module>
+        my_base_geometery.integer_validator()
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
