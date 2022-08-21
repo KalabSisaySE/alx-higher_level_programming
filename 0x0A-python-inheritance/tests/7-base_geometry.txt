@@ -1,0 +1,64 @@
+the ``7-base_geometry`` module
+==============================
+
+Using ``BaseGeometry``
+----------------------
+
+This is an example text file in reStructuedText format.  First import
+``BaseGeometry`` from ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+
+create a BaseGeometry object:
+
+    >>> my_base_geometery = BaseGeometry()
+
+test the area method:
+
+    >>> my_base_geometery.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
+
+testing integer_validator method with name (str) and value (int):
+
+    >>> my_base_geometery.integer_validator("width", 89) 
+    >>> my_base_geometery.integer_validator("age", 29)   
+
+testing integer_validator method with name (str) and value (str):
+
+    >>> my_base_geometery.integer_validator("language", "Python") 
+    Traceback (most recent call last):
+        ...
+    TypeError: language must be an integer
+
+testing integer_validator method with negative value:
+
+    >>> my_base_geometery.integer_validator("value", -9)          
+    Traceback (most recent call last):
+        ...
+    ValueError: value must greater than 0
+
+testing integer_validator method with float value:
+
+    >>> my_base_geometery.integer_validator("value", 7.98)       
+    Traceback (most recent call last):
+        ...
+    TypeError: value must be an integer
+
+testing integer_validator method with one argument:
+
+    >>> my_base_geometery.integer_validator("value")     
+    Traceback (most recent call last):
+    ...
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+testing integer_validator method with no argument:
+
+    >>> my_base_geometery.integer_validator()        
+    Traceback (most recent call last):
+    ...
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
