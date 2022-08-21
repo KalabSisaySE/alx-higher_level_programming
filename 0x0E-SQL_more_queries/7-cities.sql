@@ -11,6 +11,7 @@ USE `hbtn_0d_usa`;
 -- create table
 CREATE TABLE IF NOT EXISTS `cities` (
     `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `states_id` INT FOREIGN KEY REFERENCES `states`(`id`),
+    `states_id` INT NOT NULL,
     `name` VARCHAR(256) NOT NULL,
+    FOREIGN KEY (`states_id`) REFERENCES `states`(`id`)
 );
