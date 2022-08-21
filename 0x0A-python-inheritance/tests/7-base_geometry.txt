@@ -39,7 +39,7 @@ testing integer_validator method with negative value:
     >>> my_base_geometery.integer_validator("value", -9)          
     Traceback (most recent call last):
         ...
-    ValueError: value must greater than 0
+    ValueError: value must be greater than 0
 
 testing integer_validator method with float value:
 
