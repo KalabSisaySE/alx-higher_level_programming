@@ -7,6 +7,14 @@ class Square(Rectangle):
     """defines a square inherits from rectangle."""
 
     def __init__(self, size, x=0, y=0, id=None):
+        """instantiates a Square object
+
+        Args:
+            size (int): size of the square.
+            x (int): x position of the square.
+            y (int): y position of the square.
+            id (int): unique id of the object.
+        """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -18,6 +26,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """getter and setter method for the size param."""
         return self.width
 
     @size.setter
@@ -48,6 +57,7 @@ class Square(Rectangle):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
+        "returns the dictionary representation of the object"
         return {"id": self.id,
                 "size": self.width,
                 "x": self.x, "y": self.y}
