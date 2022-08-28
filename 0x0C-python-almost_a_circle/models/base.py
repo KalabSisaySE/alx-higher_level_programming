@@ -23,11 +23,11 @@ class Base:
         else:
             type(self).__nb_objects += 1
             self.id = type(self).__nb_objects
-        
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of `list_dictionaries`.
-        
+
         Args:
             list_dictionaries (list): list of dictionaries.
 
@@ -42,7 +42,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of `list_objs`.
-        
+
         Args:
             list_objs (list): list of instances who inherits of `Base`.
         """
@@ -59,7 +59,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns the list of JSON string representation.
-        
+
         Args:
             json_string (str): string representing a list of dictionaries.
         """
@@ -71,9 +71,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes set based on `dictionary`.
-        
+
         Args:
-            **dictionary (dict): used to set the instance's attributes. 
+            **dictionary (dict): used to set the instance's attributes.
         """
         dummy = cls(1, 1)
         dummy.update(**dictionary)
@@ -95,7 +95,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """saves list of instances to a csv file.
-        
+
         Args:
             list_objs (list): list of instances.
         """
@@ -104,7 +104,7 @@ class Base:
         with open(filename, 'w', newline='') as csvfile:
             csv_writer = csv.writer(csvfile, delimiter='|', quotechar=' ')
             csv_writer.writerow(list_objs)
-    
+
     @classmethod
     def load_from_file_csv(cls):
         filename = cls.__name__ + ".csv"

@@ -10,17 +10,21 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id, self.x, self.y, self.width)
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
+                                             self.id,
+                                             self.x,
+                                             self.y,
+                                             self.width)
 
     @property
     def size(self):
         return self.width
-    
+
     @size.setter
     def size(self, value):
         self.width = value
         self.height = value
-    
+
     def update(self, *args, **kwargs):
         """updates attributes of the object."""
         if args and len(args) > 0:
@@ -44,4 +48,6 @@ class Square(Rectangle):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
-        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+        return {"id": self.id,
+                "size": self.width,
+                "x": self.x, "y": self.y}
