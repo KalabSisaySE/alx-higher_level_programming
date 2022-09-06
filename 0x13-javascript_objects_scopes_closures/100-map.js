@@ -7,4 +7,3 @@ const newList = list.map(function (item) {
 });
 console.log(list);
 console.log(newList);
-
