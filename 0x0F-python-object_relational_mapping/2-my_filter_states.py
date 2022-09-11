@@ -17,7 +17,6 @@ if __name__ == "__main__":
     id ASC".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
-        if row[1][0] == "N":
-            print(row)
+        print(row)
     cur.close()
     db.close()
