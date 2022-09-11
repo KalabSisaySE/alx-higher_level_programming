@@ -16,4 +16,5 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'ORDER BY id")
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        if row[1][0] == "N":
+            print(row)
