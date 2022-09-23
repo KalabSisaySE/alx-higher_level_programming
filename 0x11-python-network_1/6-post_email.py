@@ -8,6 +8,7 @@ displays the body of the response
 if __name__ == "__main__":
     from sys import argv
     from urllib import request
+
     url = argv[1]
 
     request = request.Request(url)

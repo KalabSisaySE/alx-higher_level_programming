@@ -9,6 +9,7 @@ if __name__ == "__main__":
     from urllib import response
     from sys import argv
     import requests
+
     url = argv[1]
 
     response = requests.get(url)
