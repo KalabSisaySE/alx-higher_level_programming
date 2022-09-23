@@ -7,10 +7,8 @@ displays the body of the response
 
 if __name__ == "__main__":
     from sys import argv
-    from urllib import request
+    from requests
 
-    url = argv[1]
-
-    request = request.Request(url)
-    with request.urlopen(request) as response:
-        print(response.headers.get("X-Request-Id"))
+    payload = {'email': argv[2]}
+    r = requests.post(argv[1], data=payload)
+    print(r.text)
