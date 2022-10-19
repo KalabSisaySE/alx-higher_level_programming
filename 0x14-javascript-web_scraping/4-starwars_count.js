@@ -1,15 +1,15 @@
 #!/usr/bin/node
-
 const request = require('request');
-const requset = require('request');
-
-// const url = process.argv[2] + "/people/18"
 const url = process.argv[2];
 request(url, (error, response, body) => {
-  if (!error && response.statusCode == 200) {
+  if (error) {
+    console.log(error);
+  } else if (response.statusCode === 200) {
     const results = JSON.parse(body).results;
     const characthers = results.map(x => x.characters);
-    const wed_ant = characthers.filter(x => x.includes('https://swapi-api.hbtn.io/api/people/18/'));
-    console.log(wed_ant.length);
+    const wedAnt = characthers.filter(x => x.includes('https://swapi-api.hbtn.io/api/people/18/'));
+    console.log(wedAnt.length);
+  } else {
+    console.log(`An error occured. Status code: ${response.statusCode}`);
   }
 });
